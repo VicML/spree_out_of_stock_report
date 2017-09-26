@@ -2,4 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  out_of_stock: "Out of Stock"
+  out_of_stock_description: "Products (SKU) that in a range of dates ran out of stock"
+  sales_total: "Sales Total"
+  sales_total_description: "Sales Total"
