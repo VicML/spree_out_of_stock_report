@@ -4,25 +4,24 @@
 <% end %>
 
 <div class="well">
-  <%= render partial: 'spree/admin/shared/report_order_criteria' %>
+  <%= render partial: 'spree/admin/shared/out_of_stock_search' %>
 </div>
 
 <table class="table table-bordered admin-report" data-hook="sales_total">
   <thead>
     <tr>
-      <th><%= Spree.t(:currency) %></th>
-      <th><%= Spree.t(:item_total) %></th>
-      <th><%= Spree.t(:adjustment_total) %></th>
-      <th><%= Spree.t(:sales_total) %></th>
+      <th><%= Spree.t(:name) %></th>
+      <th><%= Spree.t(:sku) %></th>
+      <th> Last Out of Stock Date in Range</th>
+
     </tr>
   </thead>
   <tbody>
-    <% @totals.each do |key, row| %>
+    <% @products.each do |product| %>
       <tr>
-        <td><%= key %></td>
-        <td><%= Spree::Money.new(row[:item_total], { currency: key }) %></td>
-        <td><%= Spree::Money.new(row[:adjustment_total], { currency: key }) %></td>
-        <td><%= Spree::Money.new(row[:sales_total], { currency: key }) %></td>
+        <td><%= product.name %></td>
+        <td><%= product.sku %></td>        
+        <td><%= product.stock_items.where(:count_on_hand =>  0).last.updated_at.strftime('%Y/%m/%d') %></td>        
       </tr>
     <% end %>
   </tbody>
