@@ -1,4 +1,4 @@
-SpreeOutOfStockReport
+Spree Out Of Stock Report
 =====================
 
 Introduction goes here.
