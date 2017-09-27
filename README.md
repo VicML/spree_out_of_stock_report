@@ -1,7 +1,7 @@
 Spree Out Of Stock Report
 =====================
 
-Introduction goes here.
+This spree extension add a report view for all the products (SKU) that in a range of dates ran out of stock.
 
 ## Installation
 
