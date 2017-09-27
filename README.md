@@ -40,7 +40,6 @@ Simply add this require statement to your spec_helper:
 require 'spree_out_of_stock_report/factories'
 ```
 
-
 ## Contributing
 
 If you'd like to contribute, please take a look at the
